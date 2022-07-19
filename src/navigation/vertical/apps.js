@@ -1,133 +1,61 @@
 // ** Icons Import
-import { Mail, MessageSquare, CheckSquare, Calendar, FileText, Circle, ShoppingCart, User, Shield } from 'react-feather'
+import {Mail, MessageSquare, CheckSquare, Calendar, FileText, Circle, ShoppingCart, User, Shield} from 'react-feather'
+
+import MenuIcon from '../../@core/layouts/components/menu-icon'
+import modelImg from '../../assets/images/icons/Models.png'
+import roomImg from '../../assets/images/icons/Room.png'
+import spaceImg from '../../assets/images/icons/Spaces.png'
+import designImg from '../../assets/images/icons/DesignedSpaces.png'
+import frameImg from '../../assets/images/icons/Frames.png'
+import accountImg from '../../assets/images/icons/Account.png'
+import logoutImg from '../../assets/images/icons/Logout.png'
+import LogoutIcon from "../../@core/layouts/components/logout-icon"
+// ** Store & Actions
+//import { useDispatch } from 'react-redux'
+// import { handleLogout } from '../../redux/authentication'
+// const dispatch = useDispatch()
 
 export default [
-  {
-    header: 'Apps & Pages'
-  },
-  {
-    id: 'email',
-    title: 'Email',
-    icon: <Mail size={20} />,
-    navLink: '/apps/email'
-  },
-  {
-    id: 'chat',
-    title: 'Chat',
-    icon: <MessageSquare size={20} />,
-    navLink: '/apps/chat'
-  },
-  {
-    id: 'todo',
-    title: 'Todo',
-    icon: <CheckSquare size={20} />,
-    navLink: '/apps/todo'
-  },
-  {
-    id: 'calendar',
-    title: 'Calendar',
-    icon: <Calendar size={20} />,
-    navLink: '/apps/calendar'
-  },
-  {
-    id: 'invoiceApp',
-    title: 'Invoice',
-    icon: <FileText size={20} />,
-    children: [
-      {
-        id: 'invoiceList',
-        title: 'List',
-        icon: <Circle size={12} />,
-        navLink: '/apps/invoice/list'
-      },
-      {
-        id: 'invoicePreview',
-        title: 'Preview',
-        icon: <Circle size={12} />,
-        navLink: '/apps/invoice/preview'
-      },
-      {
-        id: 'invoiceEdit',
-        title: 'Edit',
-        icon: <Circle size={12} />,
-        navLink: '/apps/invoice/edit'
-      },
-      {
-        id: 'invoiceAdd',
-        title: 'Add',
-        icon: <Circle size={12} />,
-        navLink: '/apps/invoice/add'
-      }
-    ]
-  },
-
-  {
-    id: 'roles-permissions',
-    title: 'Roles & Permissions',
-    icon: <Shield size={20} />,
-    children: [
-      {
-        id: 'roles',
-        title: 'Roles',
-        icon: <Circle size={12} />,
-        navLink: '/apps/roles'
-      },
-      {
-        id: 'permissions',
-        title: 'Permissions',
-        icon: <Circle size={12} />,
-        navLink: '/apps/permissions'
-      }
-    ]
-  },
-  {
-    id: 'eCommerce',
-    title: 'eCommerce',
-    icon: <ShoppingCart size={20} />,
-    children: [
-      {
-        id: 'shop',
-        title: 'Shop',
-        icon: <Circle size={12} />,
-        navLink: '/apps/ecommerce/shop'
-      },
-      {
-        id: 'detail',
-        title: 'Details',
-        icon: <Circle size={12} />,
-        navLink: '/apps/ecommerce/product-detail'
-      },
-      {
-        id: 'wishList',
-        title: 'Wish List',
-        icon: <Circle size={12} />,
-        navLink: '/apps/ecommerce/wishlist'
-      },
-      {
-        id: 'checkout',
-        title: 'Checkout',
-        icon: <Circle size={12} />,
-        navLink: '/apps/ecommerce/checkout'
-      }
-    ]
-  },
-  {
-    id: 'users',
-    title: 'User',
-    icon: <User size={20} />,
-    children: [
-      {
-        id: 'list',
-        title: 'List',
-        icon: <Circle size={12} />,
-        navLink: '/apps/user/list'
-      },
-      {
-        id: 'view',
-        title: 'View',
-        icon: <Circle size={12} />,
-        navLink: '/apps/user/view'
-      }
-    ]
-  }
+    {
+        id: 'model',
+        title: 'Model',
+        icon: <MenuIcon iconImg={modelImg}></MenuIcon>,
+        navLink: '/apps/model'
+    },
+    {
+        id: 'room',
+        title: 'Room',
+        icon: <MenuIcon iconImg={roomImg}></MenuIcon>,
+        navLink: '/apps/room'
+    },
+    {
+        id: 'space',
+        title: 'Saved Spaces',
+        icon: <MenuIcon iconImg={spaceImg}></MenuIcon>,
+        navLink: '/apps/space'
+    },
+    {
+        id: 'design',
+        title: 'Designed Spaces',
+        icon: <MenuIcon iconImg={designImg}></MenuIcon>,
+        navLink: '/apps/design'
+    },
+    {
+        id: 'frame',
+        title: 'Frames',
+        icon: <MenuIcon iconImg={frameImg}></MenuIcon>,
+        navLink: '/apps/frame'
+    },
+    {
+        id: 'profile',
+        title: 'Account',
+        icon: <MenuIcon iconImg={accountImg}></MenuIcon>,
+        navLink: '/apps/profile'
+    },
+    {
+        id: 'logout',
+        title: 'Logout',
+        icon: <LogoutIcon iconImg={logoutImg}></LogoutIcon>,
+        navLink: '/login'
+    }
 ]

@@ -10,10 +10,80 @@ NOTE:
 PLACE HERE YOUR OWN SCSS CODES AND IF NEEDED, OVERRIDE THE STYLES FROM THE OTHER STYLESHEETS.
 WE WILL RELEASE FUTURE UPDATES SO IN ORDER TO NOT OVERWRITE YOUR STYLES IT'S BETTER LIKE THIS.  */
 
-.custom-navbar-margin{
+.custom-navbar-margin {
   margin: 0 !important;
   border-radius: 0 !important;
+  left: 0 !important;
+  max-width: none;
 }
-.custom-navbar-background{
+
+.custom-navbar-background {
   background: #2C2C2C;
+}
+
+.custom-back-size {
+  width: 100%;
+  height: 100vh;
+}
+
+.custom-menu-height {
+  height: 100vh !important;
+}
+
+.app-content {
+  position: absolute !important;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  padding-top: 30px !important;
+  overflow: scroll !important;
+}
+
+[dir=ltr] .vertical-layout.vertical-menu-modern.menu-collapsed .app-content, [dir=ltr] .vertical-layout.vertical-menu-modern.menu-collapsed .footer {
+  width: calc(100vw - 100px) !important;
+}
+
+.background-w {
+  background: white;
+}
+
+.navbar-middle-margin {
+  margin-left: calc(50vw - 257px);
+}
+
+.height-40 {
+  height: 40px;
+}
+
+.custom-mr-1 {
+  margin-right: 15px;
+}
+
+.custom-frame-img {
+  background: #ffa7f3;
+  border-top-right-radius: 7px;
+  border-top-left-radius: 7px;
+}
+
+.custom-my-1 {
+  margin-top: 5px !important;
+  margin-bottom: 5px !important;
+}
+
+.custom-roomCard {
+  height: 126px;
+  width: 126px;
+  border-radius: 7px;
+}
+
+.custom-spaceCard {
+  height: 136px;
+  width: 250px;
+  border-radius: 10px;
+}
+
+.custom-createBtn{
+  position: absolute;
+  top: 0;
+  right: 15px;
 }

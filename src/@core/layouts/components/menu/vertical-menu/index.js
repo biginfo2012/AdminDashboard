@@ -2,7 +2,6 @@
 import { Fragment, useState, useRef } from 'react'
 
 // ** Third Party Components
-import classnames from 'classnames'
 import PerfectScrollbar from 'react-perfect-scrollbar'
 
 // ** Vertical Menu Components
@@ -11,7 +10,7 @@ import VerticalNavMenuItems from './VerticalNavMenuItems'
 
 const Sidebar = props => {
   // ** Props
-  const { menuCollapsed, routerProps, menu, currentActiveItem, skin, menuData } = props
+  const { menuCollapsed, routerProps, menu, currentActiveItem, menuData } = props
 
   // ** States
   const [groupOpen, setGroupOpen] = useState([])
@@ -46,11 +45,7 @@ const Sidebar = props => {
   return (
     <Fragment>
       <div
-        className={classnames('main-menu menu-fixed menu-accordion menu-shadow', {
-          expanded: menuHover || menuCollapsed === false,
-          'menu-light': skin !== 'semi-dark' && skin !== 'dark',
-          'menu-dark': skin === 'semi-dark' || skin === 'dark'
-        })}
+        className='main-menu menu-fixed menu-accordion menu-shadow menu-light position-relative'
         onMouseEnter={onMouseEnter}
         onMouseLeave={() => setMenuHover(false)}
       >
@@ -59,12 +54,12 @@ const Sidebar = props => {
         ) : (
           <Fragment>
             {/* Vertical Menu Header */}
-            <VerticalMenuHeader setGroupOpen={setGroupOpen} menuHover={menuHover} {...props} />
+            {/*<VerticalMenuHeader setGroupOpen={setGroupOpen} menuHover={menuHover} {...props} />*/}
             {/* Vertical Menu Header Shadow */}
-            <div className='shadow-bottom' ref={shadowRef}></div>
+            {/*<div className='shadow-bottom' ref={shadowRef}></div>*/}
             {/* Perfect Scrollbar */}
             <PerfectScrollbar
-              className='main-menu-content'
+              className='custom-menu-height main-menu-content'
               options={{ wheelPropagation: false }}
               onScrollY={container => scrollMenu(container)}
             >

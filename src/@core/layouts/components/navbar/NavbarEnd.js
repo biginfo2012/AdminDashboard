@@ -24,9 +24,10 @@ import {
 import {useDispatch, useSelector} from 'react-redux'
 import {getBookmarks, updateBookmarked, handleSearchQuery} from '@store/navbar'
 
-import share_screen from '../../../../assets/images/icons/share_screen.png'
-import create_qr from '../../../../assets/images/icons/create_pr.png'
-import add_text from '../../../../assets/images/icons/add_text.png'
+import share_screen from '../../../../assets/images/icons/favorite.png'
+import create_qr from '../../../../assets/images/icons/resize.png'
+import add_text from '../../../../assets/images/icons/hide.png'
+import vide_input from '../../../../assets/images/icons/video_input.png'
 
 const NavbarBookmarks = () => {
     // ** Props
@@ -49,19 +50,24 @@ const NavbarBookmarks = () => {
     const renderBookmarks = () => {
         const bookmarks = [
             {
-                id: 'share_screen',
+                id: 'favourite',
                 src: share_screen,
-                title: 'Share Screen'
+                title: 'Favourite'
             },
             {
-                id: 'create_qr',
+                id: 'resize_camera',
                 src: create_qr,
-                title: 'Create QR'
+                title: 'Resize Camera'
             },
             {
-                id: 'add_text',
+                id: 'hide_camera',
                 src: add_text,
-                title: 'Add Text'
+                title: 'Hide Camera'
+            },
+            {
+                id: 'video_input',
+                src: vide_input,
+                title: 'Video Input'
             }
         ]
         if (bookmarks.length) {

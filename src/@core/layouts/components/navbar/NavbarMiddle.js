@@ -1,6 +1,6 @@
 // ** React Imports
-import {Link} from 'react-router-dom'
-import {Fragment, useEffect, useState} from 'react'
+import { Link } from 'react-router-dom'
+import { Fragment, useEffect, useState } from 'react'
 
 // ** Third Party Components
 import * as Icon from 'react-feather'
@@ -21,12 +21,12 @@ import {
 } from 'reactstrap'
 
 // ** Store & Actions
-import {useDispatch, useSelector} from 'react-redux'
-import {getBookmarks, updateBookmarked, handleSearchQuery} from '@store/navbar'
+import { useDispatch, useSelector } from 'react-redux'
+import { getBookmarks, updateBookmarked, handleSearchQuery } from '@store/navbar'
 
-import share_screen from '../../../../assets/images/icons/share_screen.png'
-import create_qr from '../../../../assets/images/icons/create_pr.png'
-import add_text from '../../../../assets/images/icons/add_text.png'
+import rotate_left from '../../../../assets/images/icons/rotate_left.png'
+import rotate_right from '../../../../assets/images/icons/rotate_right.png'
+import delete_img from '../../../../assets/images/icons/delete.png'
 
 const NavbarBookmarks = () => {
     // ** Props
@@ -49,19 +49,19 @@ const NavbarBookmarks = () => {
     const renderBookmarks = () => {
         const bookmarks = [
             {
-                id: 'share_screen',
-                src: share_screen,
-                title: 'Share Screen'
+                id: 'rotate_left',
+                src: rotate_left,
+                title: 'Rotate Left'
             },
             {
-                id: 'create_qr',
-                src: create_qr,
-                title: 'Create QR'
+                id: 'rotate_right',
+                src: rotate_right,
+                title: 'Rotate Right'
             },
             {
-                id: 'add_text',
-                src: add_text,
-                title: 'Add Text'
+                id: 'delete_img',
+                src: delete_img,
+                title: 'Delete'
             }
         ]
         if (bookmarks.length) {
@@ -75,7 +75,7 @@ const NavbarBookmarks = () => {
                                     className='custom-mr-1'
                                     src={item.src}
                                     width='25'
-                                    height='25'
+                                    height='18'
                                     alt='iconImg'
                                 />
                                 <UncontrolledTooltip target={item.id}>{item.title}</UncontrolledTooltip>
@@ -97,7 +97,7 @@ const NavbarBookmarks = () => {
                     <NavLink tag='span'>
                         <UncontrolledDropdown>
                             <DropdownToggle tag='span'>
-                                <Icon.ChevronDown className='ficon'/>
+                                <Icon.ChevronDown className='ficon' />
                             </DropdownToggle>
                             <DropdownMenu end>
                                 {store.bookmarks
@@ -105,7 +105,7 @@ const NavbarBookmarks = () => {
                                         const IconTag = Icon[item.icon]
                                         return (
                                             <DropdownItem tag={Link} to={item.link} key={item.id}>
-                                                <IconTag className='me-50' size={14}/>
+                                                <IconTag className='me-50' size={14} />
                                                 <span className='align-middle'>{item.title}</span>
                                             </DropdownItem>
                                         )
@@ -175,9 +175,9 @@ const NavbarBookmarks = () => {
                     {/*<NavLink className='bookmark-star' onClick={handleBookmarkVisibility}>*/}
                     {/*  <Icon.Star className='ficon text-warning' />*/}
                     {/*</NavLink>*/}
-                    <div className={classnames('bookmark-input search-input', {show: openSearch})}>
+                    <div className={classnames('bookmark-input search-input', { show: openSearch })}>
                         <div className='bookmark-input-icon'>
-                            <Icon.Search size={14}/>
+                            <Icon.Search size={14} />
                         </div>
                         {openSearch && store.suggestions.length ? (
                             <Autocomplete
@@ -224,9 +224,8 @@ const NavbarBookmarks = () => {
                                                     width: 'calc(90%)'
                                                 }}
                                             >
-                                                <div
-                                                    className='d-flex justify-content-start align-items-center overflow-hidden'>
-                                                    <IconTag size={17.5} className='me-75'/>
+                                                <div className='d-flex justify-content-start align-items-center overflow-hidden'>
+                                                    <IconTag size={17.5} className='me-75' />
                                                     <span className='text-truncate'>{item.title}</span>
                                                 </div>
                                             </Link>
