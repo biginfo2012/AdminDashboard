@@ -105,20 +105,6 @@ const VerticalLayout = props => {
     return () => setIsMounted(false)
   }, [])
 
-  // ** Vars
-  // const footerClasses = {
-  //   static: 'footer-static',
-  //   sticky: 'footer-fixed',
-  //   hidden: 'footer-hidden'
-  // }
-
-  // const navbarWrapperClasses = {
-  //   floating: 'navbar-floating',
-  //   sticky: 'navbar-sticky',
-  //   static: 'navbar-static',
-  //   hidden: 'navbar-hidden'
-  // }
-
   const navbarClasses = {
     floating:
       contentWidth === 'boxed' ? 'floating-nav container-xxl' : 'floating-nav',
@@ -162,10 +148,10 @@ const VerticalLayout = props => {
           )}
         </div>
       </Navbar>
-      <div className='w-100 h-100'>
+      <div className='w-100 h-63 background-b'>
         <VideoBack></VideoBack>
       </div>
-      <div className='w-100 h-100 position-relative'>
+      <div className='w-100 h-63 position-relative'>
         {!isHidden ? (
             <SidebarComponent
                 skin={skin}

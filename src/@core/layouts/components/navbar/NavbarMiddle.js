@@ -27,6 +27,8 @@ import { getBookmarks, updateBookmarked, handleSearchQuery } from '@store/navbar
 import rotate_left from '../../../../assets/images/icons/rotate_left.png'
 import rotate_right from '../../../../assets/images/icons/rotate_right.png'
 import delete_img from '../../../../assets/images/icons/delete.png'
+import display_img from '../../../../assets/images/icons/display.png'
+import scale_img from '../../../../assets/images/icons/scale.png'
 
 const NavbarBookmarks = () => {
     // ** Props
@@ -48,6 +50,16 @@ const NavbarBookmarks = () => {
     // ** Loops through Bookmarks Array to return Bookmarks
     const renderBookmarks = () => {
         const bookmarks = [
+            {
+                id: 'display',
+                src: display_img,
+                title: 'Display'
+            },
+            {
+                id: 'scale',
+                src: scale_img,
+                title: 'Scale'
+            },
             {
                 id: 'rotate_left',
                 src: rotate_left,

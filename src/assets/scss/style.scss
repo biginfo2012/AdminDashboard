@@ -22,8 +22,13 @@ WE WILL RELEASE FUTURE UPDATES SO IN ORDER TO NOT OVERWRITE YOUR STYLES IT'S BET
 }
 
 .custom-back-size {
-  width: 100%;
-  height: 100vh;
+  width: 112vh;
+  height: 63vh;
+  margin-left: calc(50vw - 56vh);
+}
+
+.h-63{
+  height: 63vh;
 }
 
 .custom-menu-height {
@@ -46,9 +51,12 @@ WE WILL RELEASE FUTURE UPDATES SO IN ORDER TO NOT OVERWRITE YOUR STYLES IT'S BET
 .background-w {
   background: white;
 }
+.background-b {
+  background: black;
+}
 
 .navbar-middle-margin {
-  margin-left: calc(50vw - 257px);
+  margin-left: calc(50vw - 311px);
 }
 
 .height-40 {
